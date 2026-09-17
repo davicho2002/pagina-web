@@ -1,123 +1,358 @@
-```css
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: #222;
-}
-
-header {
-    background-color: #111827;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0a0a0a;
     color: white;
-    text-align: center;
-    padding: 35px;
 }
 
-header h1 {
-    font-size: 35px;
-    margin-bottom: 10px;
+
+/* ---------------- NAVBAR ---------------- */
+
+.navbar {
+    height: 80px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #0a0a0a;
+
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 5px;
 }
 
 nav {
-    background-color: #2563eb;
-    text-align: center;
-    padding: 15px;
+    display: flex;
+    gap: 35px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 20px;
+
+    font-size: 13px;
     font-weight: bold;
+
+    transition: 0.3s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #999;
 }
 
-main {
-    max-width: 1000px;
-    margin: 40px auto;
-    text-align: center;
+.carrito {
+    font-size: 20px;
 }
 
-main h2 {
-    margin-bottom: 30px;
-    font-size: 28px;
+
+/* ---------------- HERO ---------------- */
+
+.hero {
+    min-height: 700px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(0,0,0,0.95),
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.1)
+        );
 }
+
+.hero-text {
+    max-width: 650px;
+}
+
+.small-title {
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #aaa;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(60px, 9vw, 120px);
+    line-height: 0.85;
+
+    font-weight: 900;
+    letter-spacing: -5px;
+}
+
+.hero h1 span {
+    color: #aaa;
+}
+
+.descripcion {
+    margin-top: 30px;
+
+    color: #aaa;
+
+    max-width: 400px;
+
+    line-height: 1.6;
+}
+
+.boton {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 16px 30px;
+
+    background-color: white;
+    color: black;
+
+    text-decoration: none;
+
+    font-weight: bold;
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #ccc;
+}
+
+
+/* ---------------- PRODUCTOS ---------------- */
 
 .productos {
-    display: flex;
-    justify-content: center;
+    padding: 100px 8%;
+    background-color: #111;
+}
+
+.titulo-seccion p {
+    color: #888;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.titulo-seccion h2 {
+    font-size: 45px;
+    margin-top: 8px;
+}
+
+.productos-grid {
+    margin-top: 50px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
     gap: 30px;
 }
 
 .producto {
-    background-color: white;
-    width: 350px;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background-color: #181818;
+
+    transition: 0.3s;
 }
 
-.producto img {
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.imagen-producto {
     width: 100%;
-    height: 280px;
-    object-fit: contain;
-    margin-bottom: 15px;
+    height: 500px;
+
+    overflow: hidden;
+
+    background-color: #222;
 }
 
-.producto h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
+.imagen-producto img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
 }
 
-.producto p {
-    color: #555;
-    margin-bottom: 15px;
+.producto:hover img {
+    transform: scale(1.05);
 }
 
-.producto h4 {
-    color: #2563eb;
-    font-size: 25px;
-    margin-bottom: 15px;
+.info-producto {
+    padding: 25px;
+}
+
+.info-producto p {
+    color: #888;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.info-producto h3 {
+    margin-top: 8px;
+
+    font-size: 21px;
+}
+
+.precio {
+    margin-top: 15px;
+
+    font-size: 20px;
+    font-weight: bold;
 }
 
 button {
-    background-color: #2563eb;
-    color: white;
+    margin-top: 20px;
+
+    width: 100%;
+
+    padding: 14px;
+
+    background-color: white;
+    color: black;
+
     border: none;
-    padding: 12px 30px;
-    border-radius: 6px;
+
+    font-weight: bold;
+
     cursor: pointer;
-    font-size: 16px;
+
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #1d4ed8;
+    background-color: #ccc;
 }
+
+
+/* ---------------- FRASE ---------------- */
+
+.frase {
+    padding: 150px 8%;
+
+    text-align: center;
+
+    background-color: #0a0a0a;
+}
+
+.frase h2 {
+    font-size: clamp(50px, 8vw, 100px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+}
+
+.frase span {
+    color: #777;
+}
+
+
+/* ---------------- NOSOTROS ---------------- */
+
+.nosotros {
+    padding: 100px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    background-color: #111;
+}
+
+.nosotros p:first-child {
+    color: #888;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+}
+
+.nosotros h2 {
+    margin-top: 20px;
+
+    font-size: 50px;
+
+    line-height: 1;
+}
+
+.texto {
+    color: #aaa;
+
+    line-height: 1.8;
+
+    max-width: 400px;
+}
+
+
+/* ---------------- FOOTER ---------------- */
 
 footer {
-    background-color: #111827;
-    color: white;
+    padding: 50px 8%;
+
+    border-top: 1px solid #222;
+
     text-align: center;
-    padding: 20px;
-    margin-top: 50px;
+
+    color: #777;
 }
 
-@media (max-width: 750px) {
-    .productos {
-        flex-direction: column;
-        align-items: center;
+.footer-logo {
+    color: white;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ---------------- CELULAR ---------------- */
+
+@media (max-width: 700px) {
+
+    nav {
+        display: none;
     }
 
-    .producto {
-        width: 90%;
+    .productos-grid {
+        grid-template-columns: 1fr;
     }
+
+    .imagen-producto {
+        height: 400px;
+    }
+
+    .nosotros {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
 }
-```
