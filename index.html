@@ -1,55 +1,166 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Celulares Express</title>
+
+    <title>VYRE | Streetwear</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>📱 Celulares Express</h1>
-        <p>Los mejores celulares al mejor precio</p>
+    <!-- ENCABEZADO -->
+    <header class="navbar">
+
+        <div class="logo">VYRE</div>
+
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="carrito">🛒</div>
+
     </header>
 
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Celulares</a>
-        <a href="#">Contacto</a>
-    </nav>
 
-    <main>
-        <h2>Nuestros celulares</h2>
+    <!-- PORTADA -->
+    <section class="hero">
 
-        <section class="productos">
+        <div class="hero-text">
+            <p class="small-title">NUEVA COLECCIÓN 2026</p>
 
+            <h1>
+                DEFINE<br>
+                YOUR <span>STYLE.</span>
+            </h1>
+
+            <p class="descripcion">
+                Streetwear diseñado para quienes crean
+                su propio camino.
+            </p>
+
+            <a href="#productos" class="boton">
+                VER COLECCIÓN
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTOS -->
+    <section id="productos" class="productos">
+
+        <div class="titulo-seccion">
+            <p>VYRE STREETWEAR</p>
+            <h2>COLECCIÓN</h2>
+        </div>
+
+
+        <div class="productos-grid">
+
+            <!-- PRODUCTO 1 -->
             <div class="producto">
-                <img src="imagenes/celular1.jpg" alt="Celular 1">
-                <h3>iPhone Duo</h3>
-                <p>Excelente cámara, gran rendimiento y diseño moderno.</p>
-                <h4>$799</h4>
-                <button>Comprar</button>
+
+                <div class="imagen-producto">
+                    <img src="imagenes/foto1.jpg" alt="Hoodie VYRE">
+                </div>
+
+                <div class="info-producto">
+                    <p>HOODIES</p>
+                    <h3>Oversized Essential Hoodie</h3>
+
+                    <div class="precio">
+                        $45.00
+                    </div>
+
+                    <button>
+                        AÑADIR AL CARRITO
+                    </button>
+                </div>
+
             </div>
 
+
+            <!-- PRODUCTO 2 -->
             <div class="producto">
-                <img src="imagenes/celular2.jpg" alt="Celular 2">
-                <h3>Iphone 18</h3>
-                <p>Potente procesador, excelente pantalla y cámara.</p>
-                <h4>$699</h4>
-                <button>Comprar</button>
+
+                <div class="imagen-producto">
+                    <img src="imagenes/foto2.jpg" alt="Jeans VYRE">
+                </div>
+
+                <div class="info-producto">
+                    <p>DENIM</p>
+                    <h3>Baggy Straight Jeans</h3>
+
+                    <div class="precio">
+                        $55.00
+                    </div>
+
+                    <button>
+                        AÑADIR AL CARRITO
+                    </button>
+                </div>
+
             </div>
 
-        </section>
-    </main>
+        </div>
 
-    <footer>
-        <p>© 2026 Celulares Express | Todos los derechos reservados</p>
+    </section>
+
+
+    <!-- FRASE -->
+    <section class="frase">
+
+        <h2>
+            NO FOLLOW.<br>
+            <span>CREATE.</span>
+        </h2>
+
+    </section>
+
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="nosotros">
+
+        <div>
+            <p>ABOUT VYRE</p>
+
+            <h2>
+                STREETWEAR
+                WITHOUT RULES.
+            </h2>
+        </div>
+
+        <p class="texto">
+            VYRE nace para representar una generación
+            que no necesita seguir tendencias para
+            encontrar su estilo.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+
+        <div class="footer-logo">
+            VYRE
+        </div>
+
+        <p>
+            © 2026 VYRE STREETWEAR
+        </p>
+
+        <p>
+            Instagram · TikTok · Contacto
+        </p>
+
     </footer>
 
 </body>
 </html>
-```
-                                
